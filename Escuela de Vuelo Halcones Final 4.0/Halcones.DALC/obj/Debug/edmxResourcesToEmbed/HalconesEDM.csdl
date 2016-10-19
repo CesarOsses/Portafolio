@@ -1,0 +1,513 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="HalconesModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="HalconesEntities" p1:LazyLoadingEnabled="true">
+    <EntitySet Name="AERONAVE" EntityType="HalconesModel.AERONAVE" />
+    <EntitySet Name="COMPONENTE" EntityType="HalconesModel.COMPONENTE" />
+    <EntitySet Name="COMPONENTES_AERONAVE" EntityType="HalconesModel.COMPONENTES_AERONAVE" />
+    <EntitySet Name="COMPONENTES_COMPONENTE" EntityType="HalconesModel.COMPONENTES_COMPONENTE" />
+    <EntitySet Name="CONDICION_VUELO" EntityType="HalconesModel.CONDICION_VUELO" />
+    <EntitySet Name="LICENCIA" EntityType="HalconesModel.LICENCIA" />
+    <EntitySet Name="LICENCIA_PILOTO" EntityType="HalconesModel.LICENCIA_PILOTO" />
+    <EntitySet Name="LLEGADA_VUELO" EntityType="HalconesModel.LLEGADA_VUELO" />
+    <EntitySet Name="MANTENIMIENTO_AERONAVE" EntityType="HalconesModel.MANTENIMIENTO_AERONAVE" />
+    <EntitySet Name="MATENIMIENTO_COMPONENTE" EntityType="HalconesModel.MATENIMIENTO_COMPONENTE" />
+    <EntitySet Name="MISION" EntityType="HalconesModel.MISION" />
+    <EntitySet Name="PERFIL" EntityType="HalconesModel.PERFIL" />
+    <EntitySet Name="PILOTO" EntityType="HalconesModel.PILOTO" />
+    <EntitySet Name="TIPO_AERONAVE" EntityType="HalconesModel.TIPO_AERONAVE" />
+    <EntitySet Name="USUARIO" EntityType="HalconesModel.USUARIO" />
+    <EntitySet Name="VUELO" EntityType="HalconesModel.VUELO" />
+    <AssociationSet Name="CA_AERONAVE_FK" Association="HalconesModel.CA_AERONAVE_FK">
+      <End Role="AERONAVE" EntitySet="AERONAVE" />
+      <End Role="COMPONENTES_AERONAVE" EntitySet="COMPONENTES_AERONAVE" />
+    </AssociationSet>
+    <AssociationSet Name="MANTENIMIENTO_AERONAVE_FK" Association="HalconesModel.MANTENIMIENTO_AERONAVE_FK">
+      <End Role="AERONAVE" EntitySet="AERONAVE" />
+      <End Role="MANTENIMIENTO_AERONAVE" EntitySet="MANTENIMIENTO_AERONAVE" />
+    </AssociationSet>
+    <AssociationSet Name="TABLE_8_TIPO_AERONAVE_FK" Association="HalconesModel.TABLE_8_TIPO_AERONAVE_FK">
+      <End Role="TIPO_AERONAVE" EntitySet="TIPO_AERONAVE" />
+      <End Role="AERONAVE" EntitySet="AERONAVE" />
+    </AssociationSet>
+    <AssociationSet Name="VUELO_AERONAVE_FK" Association="HalconesModel.VUELO_AERONAVE_FK">
+      <End Role="AERONAVE" EntitySet="AERONAVE" />
+      <End Role="VUELO" EntitySet="VUELO" />
+    </AssociationSet>
+    <AssociationSet Name="CA_COMPONENTE_FK" Association="HalconesModel.CA_COMPONENTE_FK">
+      <End Role="COMPONENTE" EntitySet="COMPONENTE" />
+      <End Role="COMPONENTES_AERONAVE" EntitySet="COMPONENTES_AERONAVE" />
+    </AssociationSet>
+    <AssociationSet Name="COMP_COMPONENTE_FK" Association="HalconesModel.COMP_COMPONENTE_FK">
+      <End Role="COMPONENTE" EntitySet="COMPONENTE" />
+      <End Role="COMPONENTES_COMPONENTE" EntitySet="COMPONENTES_COMPONENTE" />
+    </AssociationSet>
+    <AssociationSet Name="COMP_SUBCOMPONENTE_FK" Association="HalconesModel.COMP_SUBCOMPONENTE_FK">
+      <End Role="COMPONENTE" EntitySet="COMPONENTE" />
+      <End Role="COMPONENTES_COMPONENTE" EntitySet="COMPONENTES_COMPONENTE" />
+    </AssociationSet>
+    <AssociationSet Name="MC_COMPONENTE_FK" Association="HalconesModel.MC_COMPONENTE_FK">
+      <End Role="COMPONENTE" EntitySet="COMPONENTE" />
+      <End Role="MATENIMIENTO_COMPONENTE" EntitySet="MATENIMIENTO_COMPONENTE" />
+    </AssociationSet>
+    <AssociationSet Name="VUELO_CONDICION_VUELO_FK" Association="HalconesModel.VUELO_CONDICION_VUELO_FK">
+      <End Role="CONDICION_VUELO" EntitySet="CONDICION_VUELO" />
+      <End Role="VUELO" EntitySet="VUELO" />
+    </AssociationSet>
+    <AssociationSet Name="LICENCIA_PILOTO_LICENCIA_FK" Association="HalconesModel.LICENCIA_PILOTO_LICENCIA_FK">
+      <End Role="LICENCIA" EntitySet="LICENCIA" />
+      <End Role="LICENCIA_PILOTO" EntitySet="LICENCIA_PILOTO" />
+    </AssociationSet>
+    <AssociationSet Name="LICENCIA_PILOTO_PILOTO_FK" Association="HalconesModel.LICENCIA_PILOTO_PILOTO_FK">
+      <End Role="PILOTO" EntitySet="PILOTO" />
+      <End Role="LICENCIA_PILOTO" EntitySet="LICENCIA_PILOTO" />
+    </AssociationSet>
+    <AssociationSet Name="LLEGADA_VUELO_VUELO_FK" Association="HalconesModel.LLEGADA_VUELO_VUELO_FK">
+      <End Role="VUELO" EntitySet="VUELO" />
+      <End Role="LLEGADA_VUELO" EntitySet="LLEGADA_VUELO" />
+    </AssociationSet>
+    <AssociationSet Name="MC_MANTENIMIENTO_AERONAVE_FK" Association="HalconesModel.MC_MANTENIMIENTO_AERONAVE_FK">
+      <End Role="MANTENIMIENTO_AERONAVE" EntitySet="MANTENIMIENTO_AERONAVE" />
+      <End Role="MATENIMIENTO_COMPONENTE" EntitySet="MATENIMIENTO_COMPONENTE" />
+    </AssociationSet>
+    <AssociationSet Name="VUELO_MISION_FK" Association="HalconesModel.VUELO_MISION_FK">
+      <End Role="MISION" EntitySet="MISION" />
+      <End Role="VUELO" EntitySet="VUELO" />
+    </AssociationSet>
+    <AssociationSet Name="USUARIO_PERFIL_FK" Association="HalconesModel.USUARIO_PERFIL_FK">
+      <End Role="PERFIL" EntitySet="PERFIL" />
+      <End Role="USUARIO" EntitySet="USUARIO" />
+    </AssociationSet>
+    <AssociationSet Name="PILOTO_USUARIO_FK" Association="HalconesModel.PILOTO_USUARIO_FK">
+      <End Role="USUARIO" EntitySet="USUARIO" />
+      <End Role="PILOTO" EntitySet="PILOTO" />
+    </AssociationSet>
+    <AssociationSet Name="VUELO_PILOTO_FK" Association="HalconesModel.VUELO_PILOTO_FK">
+      <End Role="PILOTO" EntitySet="PILOTO" />
+      <End Role="VUELO" EntitySet="VUELO" />
+    </AssociationSet>
+    <AssociationSet Name="VUELO_PILOTO_FKV2" Association="HalconesModel.VUELO_PILOTO_FKV2">
+      <End Role="PILOTO" EntitySet="PILOTO" />
+      <End Role="VUELO" EntitySet="VUELO" />
+    </AssociationSet>
+    <FunctionImport Name="PRO_ESTADO_LICENCIA_PILOTO" />
+    <FunctionImport Name="PRO_ESTADO_VUELO" />
+    <FunctionImport Name="PRO_PRUEBA" />
+  </EntityContainer>
+  <EntityType Name="AERONAVE">
+    <Key>
+      <PropertyRef Name="ID_AERONAVE" />
+    </Key>
+    <Property Name="ID_AERONAVE" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+    <Property Name="MATRICULA" Type="String" Nullable="false" MaxLength="6" Unicode="true" FixedLength="false" />
+    <Property Name="TOTAL_SEGUNDOS_VUELO" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+    <Property Name="FECHA_INSPECCION_ANUAL" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="FECHA_AERONAVEGABILIDAD" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="ANNO_FABRICACION" Type="Decimal" Precision="38" Scale="0" />
+    <Property Name="DIAS_MANTENCION" Type="Decimal" Precision="38" Scale="0" />
+    <Property Name="HORAS_VUELO_MANTENCION" Type="Decimal" Precision="38" Scale="0" />
+    <Property Name="TOTAL_HORAS_VUELO_MANTENCION" Type="Decimal" Precision="38" Scale="0" />
+    <Property Name="ULTIMO_MANTENIMIENTO" Type="DateTime" Precision="0" />
+    <Property Name="ESTADO" Type="String" MaxLength="30" Unicode="true" FixedLength="false" />
+    <Property Name="ID_TIPO_AERONAVE" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+    <NavigationProperty Name="COMPONENTES_AERONAVE" Relationship="HalconesModel.CA_AERONAVE_FK" FromRole="AERONAVE" ToRole="COMPONENTES_AERONAVE" />
+    <NavigationProperty Name="MANTENIMIENTO_AERONAVE" Relationship="HalconesModel.MANTENIMIENTO_AERONAVE_FK" FromRole="AERONAVE" ToRole="MANTENIMIENTO_AERONAVE" />
+    <NavigationProperty Name="TIPO_AERONAVE" Relationship="HalconesModel.TABLE_8_TIPO_AERONAVE_FK" FromRole="AERONAVE" ToRole="TIPO_AERONAVE" />
+    <NavigationProperty Name="VUELO" Relationship="HalconesModel.VUELO_AERONAVE_FK" FromRole="AERONAVE" ToRole="VUELO" />
+  </EntityType>
+  <EntityType Name="COMPONENTE">
+    <Key>
+      <PropertyRef Name="ID_COMPONENTE" />
+    </Key>
+    <Property Name="ID_COMPONENTE" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+    <Property Name="COMPONENTE1" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="FABRICANTE" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+    <NavigationProperty Name="COMPONENTES_AERONAVE" Relationship="HalconesModel.CA_COMPONENTE_FK" FromRole="COMPONENTE" ToRole="COMPONENTES_AERONAVE" />
+    <NavigationProperty Name="COMPONENTES_COMPONENTE" Relationship="HalconesModel.COMP_COMPONENTE_FK" FromRole="COMPONENTE" ToRole="COMPONENTES_COMPONENTE" />
+    <NavigationProperty Name="COMPONENTES_COMPONENTE1" Relationship="HalconesModel.COMP_SUBCOMPONENTE_FK" FromRole="COMPONENTE" ToRole="COMPONENTES_COMPONENTE" />
+    <NavigationProperty Name="MATENIMIENTO_COMPONENTE" Relationship="HalconesModel.MC_COMPONENTE_FK" FromRole="COMPONENTE" ToRole="MATENIMIENTO_COMPONENTE" />
+    <Property Type="String" Name="ESTADO" Nullable="false" MaxLength="30" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="COMPONENTES_AERONAVE">
+    <Key>
+      <PropertyRef Name="ID_COMPONENTE_AERONAVE" />
+    </Key>
+    <Property Name="ID_COMPONENTE_AERONAVE" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+    <Property Name="TOTAL_SEGUNDOS_VUELO" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+    <Property Name="ID_AERONAVE" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+    <Property Name="ID_COMPONENTE" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+    <NavigationProperty Name="AERONAVE" Relationship="HalconesModel.CA_AERONAVE_FK" FromRole="COMPONENTES_AERONAVE" ToRole="AERONAVE" />
+    <NavigationProperty Name="COMPONENTE" Relationship="HalconesModel.CA_COMPONENTE_FK" FromRole="COMPONENTES_AERONAVE" ToRole="COMPONENTE" />
+  </EntityType>
+  <EntityType Name="COMPONENTES_COMPONENTE">
+    <Key>
+      <PropertyRef Name="ID_COMPONENTES_COMPONENTE" />
+    </Key>
+    <Property Name="ID_COMPONENTES_COMPONENTE" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+    <Property Name="ID_COMPONENTE" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+    <Property Name="ID_SUBCOMPONENTE" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+    <NavigationProperty Name="COMPONENTE" Relationship="HalconesModel.COMP_COMPONENTE_FK" FromRole="COMPONENTES_COMPONENTE" ToRole="COMPONENTE" />
+    <NavigationProperty Name="COMPONENTE1" Relationship="HalconesModel.COMP_SUBCOMPONENTE_FK" FromRole="COMPONENTES_COMPONENTE" ToRole="COMPONENTE" />
+  </EntityType>
+  <EntityType Name="CONDICION_VUELO">
+    <Key>
+      <PropertyRef Name="ID_CONDICION" />
+    </Key>
+    <Property Name="ID_CONDICION" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+    <Property Name="CONDICION" Type="String" Nullable="false" MaxLength="3" Unicode="true" FixedLength="false" />
+    <NavigationProperty Name="VUELO" Relationship="HalconesModel.VUELO_CONDICION_VUELO_FK" FromRole="CONDICION_VUELO" ToRole="VUELO" />
+  </EntityType>
+  <EntityType Name="LICENCIA">
+    <Key>
+      <PropertyRef Name="ID_LICENCIA" />
+    </Key>
+    <Property Name="ID_LICENCIA" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+    <Property Name="LICENCIA1" Type="String" Nullable="false" MaxLength="30" Unicode="true" FixedLength="false" />
+    <Property Name="ESTADO" Type="String" Nullable="false" MaxLength="30" Unicode="true" FixedLength="false" />
+    <NavigationProperty Name="LICENCIA_PILOTO" Relationship="HalconesModel.LICENCIA_PILOTO_LICENCIA_FK" FromRole="LICENCIA" ToRole="LICENCIA_PILOTO" />
+    <Property Type="Decimal" Name="DIAS_RENOVACION" Precision="38" Scale="0" />
+  </EntityType>
+  <EntityType Name="LICENCIA_PILOTO">
+    <Key>
+      <PropertyRef Name="ID_LICENCIA_PILOTO" />
+    </Key>
+    <Property Name="ID_LICENCIA_PILOTO" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+    <Property Name="ESTADO" Type="String" Nullable="false" MaxLength="30" Unicode="true" FixedLength="false" />
+    <Property Name="ULTIMO_CONTROL" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="NUEVO_CONTROL" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="ID_PILOTO" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+    <Property Name="ID_LICENCIA" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+    <NavigationProperty Name="LICENCIA" Relationship="HalconesModel.LICENCIA_PILOTO_LICENCIA_FK" FromRole="LICENCIA_PILOTO" ToRole="LICENCIA" />
+    <NavigationProperty Name="PILOTO" Relationship="HalconesModel.LICENCIA_PILOTO_PILOTO_FK" FromRole="LICENCIA_PILOTO" ToRole="PILOTO" />
+  </EntityType>
+  <EntityType Name="LLEGADA_VUELO">
+    <Key>
+      <PropertyRef Name="ID_LLEGADA" />
+    </Key>
+    <Property Name="ID_LLEGADA" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+    <Property Name="FECHA_LLEGADA" Type="DateTime" Nullable="false" Precision="6" />
+    <Property Name="SEGUNDOS_VUELO" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+    <Property Name="SEGUNDOS_VUELO_PILOTO" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+    <Property Name="SEGUNDOS_VUELO_COPILOTO" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+    <Property Name="COMENTARIOS" Type="String" Nullable="false" MaxLength="1000" Unicode="true" FixedLength="false" />
+    <Property Name="ID_VUELO" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+    <NavigationProperty Name="VUELO" Relationship="HalconesModel.LLEGADA_VUELO_VUELO_FK" FromRole="LLEGADA_VUELO" ToRole="VUELO" />
+  </EntityType>
+  <EntityType Name="MANTENIMIENTO_AERONAVE">
+    <Key>
+      <PropertyRef Name="ID_MANTENIMIENTO_AERONAVE" />
+    </Key>
+    <Property Name="ID_MANTENIMIENTO_AERONAVE" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+    <Property Name="TIPO_MANTENIMIENTO" Type="String" Nullable="false" MaxLength="30" Unicode="true" FixedLength="false" />
+    <Property Name="FECHA_MATENIMIENTO" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="ESTADO" Type="String" Nullable="false" MaxLength="30" Unicode="true" FixedLength="false" />
+    <Property Name="ID_AERONAVE" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+    <NavigationProperty Name="AERONAVE" Relationship="HalconesModel.MANTENIMIENTO_AERONAVE_FK" FromRole="MANTENIMIENTO_AERONAVE" ToRole="AERONAVE" />
+    <NavigationProperty Name="MATENIMIENTO_COMPONENTE" Relationship="HalconesModel.MC_MANTENIMIENTO_AERONAVE_FK" FromRole="MANTENIMIENTO_AERONAVE" ToRole="MATENIMIENTO_COMPONENTE" />
+  </EntityType>
+  <EntityType Name="MATENIMIENTO_COMPONENTE">
+    <Key>
+      <PropertyRef Name="ID_MANTENIMIENTO_COMPONENTE" />
+    </Key>
+    <Property Name="ID_MANTENIMIENTO_COMPONENTE" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+    <Property Name="FECHA_MANTENIMIENTO" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="ESTADO" Type="String" Nullable="false" MaxLength="30" Unicode="true" FixedLength="false" />
+    <Property Name="ID_COMPONENTE" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+    <Property Name="ID_MANTENIMIENTO_AERONAVE" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+    <NavigationProperty Name="COMPONENTE" Relationship="HalconesModel.MC_COMPONENTE_FK" FromRole="MATENIMIENTO_COMPONENTE" ToRole="COMPONENTE" />
+    <NavigationProperty Name="MANTENIMIENTO_AERONAVE" Relationship="HalconesModel.MC_MANTENIMIENTO_AERONAVE_FK" FromRole="MATENIMIENTO_COMPONENTE" ToRole="MANTENIMIENTO_AERONAVE" />
+  </EntityType>
+  <EntityType Name="MISION">
+    <Key>
+      <PropertyRef Name="ID_MISION" />
+    </Key>
+    <Property Name="ID_MISION" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+    <Property Name="MISION1" Type="String" Nullable="false" MaxLength="100" Unicode="true" FixedLength="false" />
+    <NavigationProperty Name="VUELO" Relationship="HalconesModel.VUELO_MISION_FK" FromRole="MISION" ToRole="VUELO" />
+  </EntityType>
+  <EntityType Name="PERFIL">
+    <Key>
+      <PropertyRef Name="ID_PERFIL" />
+    </Key>
+    <Property Name="ID_PERFIL" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+    <Property Name="PERFIL1" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+    <NavigationProperty Name="USUARIO" Relationship="HalconesModel.USUARIO_PERFIL_FK" FromRole="PERFIL" ToRole="USUARIO" />
+  </EntityType>
+  <EntityType Name="PILOTO">
+    <Key>
+      <PropertyRef Name="ID_PILOTO" />
+    </Key>
+    <Property Name="ID_PILOTO" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+    <Property Name="NACIONALIDAD" Type="String" Nullable="false" MaxLength="30" Unicode="true" FixedLength="false" />
+    <Property Name="COMUNA" Type="String" Nullable="false" MaxLength="30" Unicode="true" FixedLength="false" />
+    <Property Name="DIRECCION" Type="String" Nullable="false" MaxLength="30" Unicode="true" FixedLength="false" />
+    <Property Name="MEDICINA_AEROSPACIAL" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="TOTAL_SEGUNDOS_VUELO" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+    <Property Name="ID_USUARIO" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+    <NavigationProperty Name="LICENCIA_PILOTO" Relationship="HalconesModel.LICENCIA_PILOTO_PILOTO_FK" FromRole="PILOTO" ToRole="LICENCIA_PILOTO" />
+    <NavigationProperty Name="USUARIO" Relationship="HalconesModel.PILOTO_USUARIO_FK" FromRole="PILOTO" ToRole="USUARIO" />
+    <NavigationProperty Name="VUELO" Relationship="HalconesModel.VUELO_PILOTO_FK" FromRole="PILOTO" ToRole="VUELO" />
+    <NavigationProperty Name="VUELO1" Relationship="HalconesModel.VUELO_PILOTO_FKV2" FromRole="PILOTO" ToRole="VUELO" />
+  </EntityType>
+  <EntityType Name="TIPO_AERONAVE">
+    <Key>
+      <PropertyRef Name="ID_TIPO_AERONAVE" />
+    </Key>
+    <Property Name="ID_TIPO_AERONAVE" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+    <Property Name="TIPO_AERONAVE1" Type="String" Nullable="false" MaxLength="30" Unicode="true" FixedLength="false" />
+    <NavigationProperty Name="AERONAVE" Relationship="HalconesModel.TABLE_8_TIPO_AERONAVE_FK" FromRole="TIPO_AERONAVE" ToRole="AERONAVE" />
+  </EntityType>
+  <EntityType Name="USUARIO">
+    <Key>
+      <PropertyRef Name="ID_USUARIO" />
+    </Key>
+    <Property Name="ID_USUARIO" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+    <Property Name="USERNAME" Type="String" Nullable="false" MaxLength="30" Unicode="true" FixedLength="false" />
+    <Property Name="PASSWORD" Type="String" Nullable="false" MaxLength="30" Unicode="true" FixedLength="false" />
+    <Property Name="CORREO" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="RUT" Type="String" Nullable="false" MaxLength="10" Unicode="true" FixedLength="false" />
+    <Property Name="NOMBRES" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="APELLIDOS" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="FECHA_NACIMIENTO" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="ESTADO" Type="String" Nullable="false" MaxLength="30" Unicode="true" FixedLength="false" />
+    <Property Name="ID_PERFIL" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+    <NavigationProperty Name="PERFIL" Relationship="HalconesModel.USUARIO_PERFIL_FK" FromRole="USUARIO" ToRole="PERFIL" />
+    <NavigationProperty Name="PILOTO" Relationship="HalconesModel.PILOTO_USUARIO_FK" FromRole="USUARIO" ToRole="PILOTO" />
+  </EntityType>
+  <EntityType Name="VUELO">
+    <Key>
+      <PropertyRef Name="ID_VUELO" />
+    </Key>
+    <Property Name="ID_VUELO" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+    <Property Name="FECHA_SALIDA" Type="DateTime" Nullable="false" Precision="6" />
+    <Property Name="ESTADO" Type="String" Nullable="false" MaxLength="30" Unicode="true" FixedLength="false" />
+    <Property Name="ORIGEN" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="DESTINO" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="ID_AERONAVE" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+    <Property Name="ID_PILOTO" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+    <Property Name="ID_COPILOTO" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+    <Property Name="ID_CONDICION" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+    <Property Name="ID_MISION" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+    <NavigationProperty Name="AERONAVE" Relationship="HalconesModel.VUELO_AERONAVE_FK" FromRole="VUELO" ToRole="AERONAVE" />
+    <NavigationProperty Name="CONDICION_VUELO" Relationship="HalconesModel.VUELO_CONDICION_VUELO_FK" FromRole="VUELO" ToRole="CONDICION_VUELO" />
+    <NavigationProperty Name="LLEGADA_VUELO" Relationship="HalconesModel.LLEGADA_VUELO_VUELO_FK" FromRole="VUELO" ToRole="LLEGADA_VUELO" />
+    <NavigationProperty Name="MISION" Relationship="HalconesModel.VUELO_MISION_FK" FromRole="VUELO" ToRole="MISION" />
+    <NavigationProperty Name="PILOTO" Relationship="HalconesModel.VUELO_PILOTO_FK" FromRole="VUELO" ToRole="PILOTO" />
+    <NavigationProperty Name="PILOTO1" Relationship="HalconesModel.VUELO_PILOTO_FKV2" FromRole="VUELO" ToRole="PILOTO" />
+  </EntityType>
+  <Association Name="CA_AERONAVE_FK">
+    <End Role="AERONAVE" Type="HalconesModel.AERONAVE" Multiplicity="1" />
+    <End Role="COMPONENTES_AERONAVE" Type="HalconesModel.COMPONENTES_AERONAVE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AERONAVE">
+        <PropertyRef Name="ID_AERONAVE" />
+      </Principal>
+      <Dependent Role="COMPONENTES_AERONAVE">
+        <PropertyRef Name="ID_AERONAVE" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="MANTENIMIENTO_AERONAVE_FK">
+    <End Role="AERONAVE" Type="HalconesModel.AERONAVE" Multiplicity="1" />
+    <End Role="MANTENIMIENTO_AERONAVE" Type="HalconesModel.MANTENIMIENTO_AERONAVE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AERONAVE">
+        <PropertyRef Name="ID_AERONAVE" />
+      </Principal>
+      <Dependent Role="MANTENIMIENTO_AERONAVE">
+        <PropertyRef Name="ID_AERONAVE" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="TABLE_8_TIPO_AERONAVE_FK">
+    <End Role="TIPO_AERONAVE" Type="HalconesModel.TIPO_AERONAVE" Multiplicity="1" />
+    <End Role="AERONAVE" Type="HalconesModel.AERONAVE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TIPO_AERONAVE">
+        <PropertyRef Name="ID_TIPO_AERONAVE" />
+      </Principal>
+      <Dependent Role="AERONAVE">
+        <PropertyRef Name="ID_TIPO_AERONAVE" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="VUELO_AERONAVE_FK">
+    <End Role="AERONAVE" Type="HalconesModel.AERONAVE" Multiplicity="1" />
+    <End Role="VUELO" Type="HalconesModel.VUELO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AERONAVE">
+        <PropertyRef Name="ID_AERONAVE" />
+      </Principal>
+      <Dependent Role="VUELO">
+        <PropertyRef Name="ID_AERONAVE" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="CA_COMPONENTE_FK">
+    <End Role="COMPONENTE" Type="HalconesModel.COMPONENTE" Multiplicity="1" />
+    <End Role="COMPONENTES_AERONAVE" Type="HalconesModel.COMPONENTES_AERONAVE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="COMPONENTE">
+        <PropertyRef Name="ID_COMPONENTE" />
+      </Principal>
+      <Dependent Role="COMPONENTES_AERONAVE">
+        <PropertyRef Name="ID_COMPONENTE" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="COMP_COMPONENTE_FK">
+    <End Role="COMPONENTE" Type="HalconesModel.COMPONENTE" Multiplicity="1" />
+    <End Role="COMPONENTES_COMPONENTE" Type="HalconesModel.COMPONENTES_COMPONENTE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="COMPONENTE">
+        <PropertyRef Name="ID_COMPONENTE" />
+      </Principal>
+      <Dependent Role="COMPONENTES_COMPONENTE">
+        <PropertyRef Name="ID_COMPONENTE" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="COMP_SUBCOMPONENTE_FK">
+    <End Role="COMPONENTE" Type="HalconesModel.COMPONENTE" Multiplicity="1" />
+    <End Role="COMPONENTES_COMPONENTE" Type="HalconesModel.COMPONENTES_COMPONENTE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="COMPONENTE">
+        <PropertyRef Name="ID_COMPONENTE" />
+      </Principal>
+      <Dependent Role="COMPONENTES_COMPONENTE">
+        <PropertyRef Name="ID_SUBCOMPONENTE" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="MC_COMPONENTE_FK">
+    <End Role="COMPONENTE" Type="HalconesModel.COMPONENTE" Multiplicity="1" />
+    <End Role="MATENIMIENTO_COMPONENTE" Type="HalconesModel.MATENIMIENTO_COMPONENTE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="COMPONENTE">
+        <PropertyRef Name="ID_COMPONENTE" />
+      </Principal>
+      <Dependent Role="MATENIMIENTO_COMPONENTE">
+        <PropertyRef Name="ID_COMPONENTE" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="VUELO_CONDICION_VUELO_FK">
+    <End Role="CONDICION_VUELO" Type="HalconesModel.CONDICION_VUELO" Multiplicity="1" />
+    <End Role="VUELO" Type="HalconesModel.VUELO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CONDICION_VUELO">
+        <PropertyRef Name="ID_CONDICION" />
+      </Principal>
+      <Dependent Role="VUELO">
+        <PropertyRef Name="ID_CONDICION" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="LICENCIA_PILOTO_LICENCIA_FK">
+    <End Role="LICENCIA" Type="HalconesModel.LICENCIA" Multiplicity="1" />
+    <End Role="LICENCIA_PILOTO" Type="HalconesModel.LICENCIA_PILOTO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="LICENCIA">
+        <PropertyRef Name="ID_LICENCIA" />
+      </Principal>
+      <Dependent Role="LICENCIA_PILOTO">
+        <PropertyRef Name="ID_LICENCIA" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="LICENCIA_PILOTO_PILOTO_FK">
+    <End Role="PILOTO" Type="HalconesModel.PILOTO" Multiplicity="1" />
+    <End Role="LICENCIA_PILOTO" Type="HalconesModel.LICENCIA_PILOTO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PILOTO">
+        <PropertyRef Name="ID_PILOTO" />
+      </Principal>
+      <Dependent Role="LICENCIA_PILOTO">
+        <PropertyRef Name="ID_PILOTO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="LLEGADA_VUELO_VUELO_FK">
+    <End Role="VUELO" Type="HalconesModel.VUELO" Multiplicity="1" />
+    <End Role="LLEGADA_VUELO" Type="HalconesModel.LLEGADA_VUELO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="VUELO">
+        <PropertyRef Name="ID_VUELO" />
+      </Principal>
+      <Dependent Role="LLEGADA_VUELO">
+        <PropertyRef Name="ID_VUELO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="MC_MANTENIMIENTO_AERONAVE_FK">
+    <End Role="MANTENIMIENTO_AERONAVE" Type="HalconesModel.MANTENIMIENTO_AERONAVE" Multiplicity="1" />
+    <End Role="MATENIMIENTO_COMPONENTE" Type="HalconesModel.MATENIMIENTO_COMPONENTE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MANTENIMIENTO_AERONAVE">
+        <PropertyRef Name="ID_MANTENIMIENTO_AERONAVE" />
+      </Principal>
+      <Dependent Role="MATENIMIENTO_COMPONENTE">
+        <PropertyRef Name="ID_MANTENIMIENTO_AERONAVE" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="VUELO_MISION_FK">
+    <End Role="MISION" Type="HalconesModel.MISION" Multiplicity="1" />
+    <End Role="VUELO" Type="HalconesModel.VUELO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MISION">
+        <PropertyRef Name="ID_MISION" />
+      </Principal>
+      <Dependent Role="VUELO">
+        <PropertyRef Name="ID_MISION" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="USUARIO_PERFIL_FK">
+    <End Role="PERFIL" Type="HalconesModel.PERFIL" Multiplicity="1" />
+    <End Role="USUARIO" Type="HalconesModel.USUARIO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PERFIL">
+        <PropertyRef Name="ID_PERFIL" />
+      </Principal>
+      <Dependent Role="USUARIO">
+        <PropertyRef Name="ID_PERFIL" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="PILOTO_USUARIO_FK">
+    <End Role="USUARIO" Type="HalconesModel.USUARIO" Multiplicity="1" />
+    <End Role="PILOTO" Type="HalconesModel.PILOTO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="USUARIO">
+        <PropertyRef Name="ID_USUARIO" />
+      </Principal>
+      <Dependent Role="PILOTO">
+        <PropertyRef Name="ID_USUARIO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="VUELO_PILOTO_FK">
+    <End Role="PILOTO" Type="HalconesModel.PILOTO" Multiplicity="1" />
+    <End Role="VUELO" Type="HalconesModel.VUELO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PILOTO">
+        <PropertyRef Name="ID_PILOTO" />
+      </Principal>
+      <Dependent Role="VUELO">
+        <PropertyRef Name="ID_PILOTO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="VUELO_PILOTO_FKV2">
+    <End Role="PILOTO" Type="HalconesModel.PILOTO" Multiplicity="1" />
+    <End Role="VUELO" Type="HalconesModel.VUELO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PILOTO">
+        <PropertyRef Name="ID_PILOTO" />
+      </Principal>
+      <Dependent Role="VUELO">
+        <PropertyRef Name="ID_COPILOTO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

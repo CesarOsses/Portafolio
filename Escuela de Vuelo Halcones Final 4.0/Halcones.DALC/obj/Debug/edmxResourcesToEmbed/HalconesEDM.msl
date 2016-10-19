@@ -1,0 +1,189 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="HalconesModelStoreContainer" CdmEntityContainer="HalconesEntities">
+    <EntitySetMapping Name="AERONAVE">
+      <EntityTypeMapping TypeName="HalconesModel.AERONAVE">
+        <MappingFragment StoreEntitySet="AERONAVE">
+          <ScalarProperty Name="ID_AERONAVE" ColumnName="ID_AERONAVE" />
+          <ScalarProperty Name="MATRICULA" ColumnName="MATRICULA" />
+          <ScalarProperty Name="TOTAL_SEGUNDOS_VUELO" ColumnName="TOTAL_SEGUNDOS_VUELO" />
+          <ScalarProperty Name="FECHA_INSPECCION_ANUAL" ColumnName="FECHA_INSPECCION_ANUAL" />
+          <ScalarProperty Name="FECHA_AERONAVEGABILIDAD" ColumnName="FECHA_AERONAVEGABILIDAD" />
+          <ScalarProperty Name="ANNO_FABRICACION" ColumnName="ANNO_FABRICACION" />
+          <ScalarProperty Name="DIAS_MANTENCION" ColumnName="DIAS_MANTENCION" />
+          <ScalarProperty Name="HORAS_VUELO_MANTENCION" ColumnName="HORAS_VUELO_MANTENCION" />
+          <ScalarProperty Name="TOTAL_HORAS_VUELO_MANTENCION" ColumnName="TOTAL_HORAS_VUELO_MANTENCION" />
+          <ScalarProperty Name="ULTIMO_MANTENIMIENTO" ColumnName="ULTIMO_MANTENIMIENTO" />
+          <ScalarProperty Name="ESTADO" ColumnName="ESTADO" />
+          <ScalarProperty Name="ID_TIPO_AERONAVE" ColumnName="ID_TIPO_AERONAVE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="COMPONENTE">
+      <EntityTypeMapping TypeName="HalconesModel.COMPONENTE">
+        <MappingFragment StoreEntitySet="COMPONENTE">
+          <ScalarProperty Name="ESTADO" ColumnName="ESTADO" />
+          <ScalarProperty Name="ID_COMPONENTE" ColumnName="ID_COMPONENTE" />
+          <ScalarProperty Name="COMPONENTE1" ColumnName="COMPONENTE" />
+          <ScalarProperty Name="FABRICANTE" ColumnName="FABRICANTE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="COMPONENTES_AERONAVE">
+      <EntityTypeMapping TypeName="HalconesModel.COMPONENTES_AERONAVE">
+        <MappingFragment StoreEntitySet="COMPONENTES_AERONAVE">
+          <ScalarProperty Name="ID_COMPONENTE_AERONAVE" ColumnName="ID_COMPONENTE_AERONAVE" />
+          <ScalarProperty Name="TOTAL_SEGUNDOS_VUELO" ColumnName="TOTAL_SEGUNDOS_VUELO" />
+          <ScalarProperty Name="ID_AERONAVE" ColumnName="ID_AERONAVE" />
+          <ScalarProperty Name="ID_COMPONENTE" ColumnName="ID_COMPONENTE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="COMPONENTES_COMPONENTE">
+      <EntityTypeMapping TypeName="HalconesModel.COMPONENTES_COMPONENTE">
+        <MappingFragment StoreEntitySet="COMPONENTES_COMPONENTE">
+          <ScalarProperty Name="ID_COMPONENTES_COMPONENTE" ColumnName="ID_COMPONENTES_COMPONENTE" />
+          <ScalarProperty Name="ID_COMPONENTE" ColumnName="ID_COMPONENTE" />
+          <ScalarProperty Name="ID_SUBCOMPONENTE" ColumnName="ID_SUBCOMPONENTE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CONDICION_VUELO">
+      <EntityTypeMapping TypeName="HalconesModel.CONDICION_VUELO">
+        <MappingFragment StoreEntitySet="CONDICION_VUELO">
+          <ScalarProperty Name="ID_CONDICION" ColumnName="ID_CONDICION" />
+          <ScalarProperty Name="CONDICION" ColumnName="CONDICION" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LICENCIA">
+      <EntityTypeMapping TypeName="HalconesModel.LICENCIA">
+        <MappingFragment StoreEntitySet="LICENCIA">
+          <ScalarProperty Name="DIAS_RENOVACION" ColumnName="DIAS_RENOVACION" />
+          <ScalarProperty Name="ID_LICENCIA" ColumnName="ID_LICENCIA" />
+          <ScalarProperty Name="LICENCIA1" ColumnName="LICENCIA" />
+          <ScalarProperty Name="ESTADO" ColumnName="ESTADO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LICENCIA_PILOTO">
+      <EntityTypeMapping TypeName="HalconesModel.LICENCIA_PILOTO">
+        <MappingFragment StoreEntitySet="LICENCIA_PILOTO">
+          <ScalarProperty Name="ID_LICENCIA_PILOTO" ColumnName="ID_LICENCIA_PILOTO" />
+          <ScalarProperty Name="ESTADO" ColumnName="ESTADO" />
+          <ScalarProperty Name="ULTIMO_CONTROL" ColumnName="ULTIMO_CONTROL" />
+          <ScalarProperty Name="NUEVO_CONTROL" ColumnName="NUEVO_CONTROL" />
+          <ScalarProperty Name="ID_PILOTO" ColumnName="ID_PILOTO" />
+          <ScalarProperty Name="ID_LICENCIA" ColumnName="ID_LICENCIA" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LLEGADA_VUELO">
+      <EntityTypeMapping TypeName="HalconesModel.LLEGADA_VUELO">
+        <MappingFragment StoreEntitySet="LLEGADA_VUELO">
+          <ScalarProperty Name="ID_LLEGADA" ColumnName="ID_LLEGADA" />
+          <ScalarProperty Name="FECHA_LLEGADA" ColumnName="FECHA_LLEGADA" />
+          <ScalarProperty Name="SEGUNDOS_VUELO" ColumnName="SEGUNDOS_VUELO" />
+          <ScalarProperty Name="SEGUNDOS_VUELO_PILOTO" ColumnName="SEGUNDOS_VUELO_PILOTO" />
+          <ScalarProperty Name="SEGUNDOS_VUELO_COPILOTO" ColumnName="SEGUNDOS_VUELO_COPILOTO" />
+          <ScalarProperty Name="COMENTARIOS" ColumnName="COMENTARIOS" />
+          <ScalarProperty Name="ID_VUELO" ColumnName="ID_VUELO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MANTENIMIENTO_AERONAVE">
+      <EntityTypeMapping TypeName="HalconesModel.MANTENIMIENTO_AERONAVE">
+        <MappingFragment StoreEntitySet="MANTENIMIENTO_AERONAVE">
+          <ScalarProperty Name="ID_MANTENIMIENTO_AERONAVE" ColumnName="ID_MANTENIMIENTO_AERONAVE" />
+          <ScalarProperty Name="TIPO_MANTENIMIENTO" ColumnName="TIPO_MANTENIMIENTO" />
+          <ScalarProperty Name="FECHA_MATENIMIENTO" ColumnName="FECHA_MATENIMIENTO" />
+          <ScalarProperty Name="ESTADO" ColumnName="ESTADO" />
+          <ScalarProperty Name="ID_AERONAVE" ColumnName="ID_AERONAVE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MATENIMIENTO_COMPONENTE">
+      <EntityTypeMapping TypeName="HalconesModel.MATENIMIENTO_COMPONENTE">
+        <MappingFragment StoreEntitySet="MATENIMIENTO_COMPONENTE">
+          <ScalarProperty Name="ID_MANTENIMIENTO_COMPONENTE" ColumnName="ID_MANTENIMIENTO_COMPONENTE" />
+          <ScalarProperty Name="FECHA_MANTENIMIENTO" ColumnName="FECHA_MANTENIMIENTO" />
+          <ScalarProperty Name="ESTADO" ColumnName="ESTADO" />
+          <ScalarProperty Name="ID_COMPONENTE" ColumnName="ID_COMPONENTE" />
+          <ScalarProperty Name="ID_MANTENIMIENTO_AERONAVE" ColumnName="ID_MANTENIMIENTO_AERONAVE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MISION">
+      <EntityTypeMapping TypeName="HalconesModel.MISION">
+        <MappingFragment StoreEntitySet="MISION">
+          <ScalarProperty Name="ID_MISION" ColumnName="ID_MISION" />
+          <ScalarProperty Name="MISION1" ColumnName="MISION" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PERFIL">
+      <EntityTypeMapping TypeName="HalconesModel.PERFIL">
+        <MappingFragment StoreEntitySet="PERFIL">
+          <ScalarProperty Name="ID_PERFIL" ColumnName="ID_PERFIL" />
+          <ScalarProperty Name="PERFIL1" ColumnName="PERFIL" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PILOTO">
+      <EntityTypeMapping TypeName="HalconesModel.PILOTO">
+        <MappingFragment StoreEntitySet="PILOTO">
+          <ScalarProperty Name="ID_PILOTO" ColumnName="ID_PILOTO" />
+          <ScalarProperty Name="NACIONALIDAD" ColumnName="NACIONALIDAD" />
+          <ScalarProperty Name="COMUNA" ColumnName="COMUNA" />
+          <ScalarProperty Name="DIRECCION" ColumnName="DIRECCION" />
+          <ScalarProperty Name="MEDICINA_AEROSPACIAL" ColumnName="MEDICINA_AEROSPACIAL" />
+          <ScalarProperty Name="TOTAL_SEGUNDOS_VUELO" ColumnName="TOTAL_SEGUNDOS_VUELO" />
+          <ScalarProperty Name="ID_USUARIO" ColumnName="ID_USUARIO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TIPO_AERONAVE">
+      <EntityTypeMapping TypeName="HalconesModel.TIPO_AERONAVE">
+        <MappingFragment StoreEntitySet="TIPO_AERONAVE">
+          <ScalarProperty Name="ID_TIPO_AERONAVE" ColumnName="ID_TIPO_AERONAVE" />
+          <ScalarProperty Name="TIPO_AERONAVE1" ColumnName="TIPO_AERONAVE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="USUARIO">
+      <EntityTypeMapping TypeName="HalconesModel.USUARIO">
+        <MappingFragment StoreEntitySet="USUARIO">
+          <ScalarProperty Name="ID_USUARIO" ColumnName="ID_USUARIO" />
+          <ScalarProperty Name="USERNAME" ColumnName="USERNAME" />
+          <ScalarProperty Name="PASSWORD" ColumnName="PASSWORD" />
+          <ScalarProperty Name="CORREO" ColumnName="CORREO" />
+          <ScalarProperty Name="RUT" ColumnName="RUT" />
+          <ScalarProperty Name="NOMBRES" ColumnName="NOMBRES" />
+          <ScalarProperty Name="APELLIDOS" ColumnName="APELLIDOS" />
+          <ScalarProperty Name="FECHA_NACIMIENTO" ColumnName="FECHA_NACIMIENTO" />
+          <ScalarProperty Name="ESTADO" ColumnName="ESTADO" />
+          <ScalarProperty Name="ID_PERFIL" ColumnName="ID_PERFIL" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VUELO">
+      <EntityTypeMapping TypeName="HalconesModel.VUELO">
+        <MappingFragment StoreEntitySet="VUELO">
+          <ScalarProperty Name="ID_VUELO" ColumnName="ID_VUELO" />
+          <ScalarProperty Name="FECHA_SALIDA" ColumnName="FECHA_SALIDA" />
+          <ScalarProperty Name="ESTADO" ColumnName="ESTADO" />
+          <ScalarProperty Name="ORIGEN" ColumnName="ORIGEN" />
+          <ScalarProperty Name="DESTINO" ColumnName="DESTINO" />
+          <ScalarProperty Name="ID_AERONAVE" ColumnName="ID_AERONAVE" />
+          <ScalarProperty Name="ID_PILOTO" ColumnName="ID_PILOTO" />
+          <ScalarProperty Name="ID_COPILOTO" ColumnName="ID_COPILOTO" />
+          <ScalarProperty Name="ID_CONDICION" ColumnName="ID_CONDICION" />
+          <ScalarProperty Name="ID_MISION" ColumnName="ID_MISION" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="PRO_ESTADO_LICENCIA_PILOTO" FunctionName="HalconesModel.Store.PRO_ESTADO_LICENCIA_PILOTO" />
+    <FunctionImportMapping FunctionImportName="PRO_ESTADO_VUELO" FunctionName="HalconesModel.Store.PRO_ESTADO_VUELO" />
+    <FunctionImportMapping FunctionImportName="PRO_PRUEBA" FunctionName="HalconesModel.Store.PRO_PRUEBA" />
+  </EntityContainerMapping>
+</Mapping>

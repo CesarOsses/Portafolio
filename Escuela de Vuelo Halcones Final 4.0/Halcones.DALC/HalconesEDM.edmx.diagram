@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="65ab8fe1d5c04e6eb0e4f6a65cd0735a" Name="Diagrama1">
+        <EntityTypeShape EntityType="HalconesModel.AERONAVE" Width="1.5" PointX="8.25" PointY="10.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="HalconesModel.COMPONENTE" Width="1.5" PointX="10.75" PointY="11.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HalconesModel.COMPONENTES_AERONAVE" Width="1.5" PointX="13" PointY="11.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="HalconesModel.COMPONENTES_COMPONENTE" Width="1.5" PointX="13" PointY="14.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="HalconesModel.CONDICION_VUELO" Width="1.5" PointX="8.25" PointY="15.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="HalconesModel.LICENCIA" Width="1.5" PointX="5.25" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HalconesModel.LICENCIA_PILOTO" Width="1.5" PointX="7.5" PointY="4.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="HalconesModel.LLEGADA_VUELO" Width="1.5" PointX="12.75" PointY="4.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="HalconesModel.MANTENIMIENTO_AERONAVE" Width="1.5" PointX="13.75" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HalconesModel.MATENIMIENTO_COMPONENTE" Width="1.5" PointX="16" PointY="11.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HalconesModel.MISION" Width="1.5" PointX="8.25" PointY="17.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="HalconesModel.PERFIL" Width="1.5" PointX="0.75" PointY="4.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="HalconesModel.PILOTO" Width="1.5" PointX="5.25" PointY="4.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="HalconesModel.TIPO_AERONAVE" Width="1.5" PointX="6" PointY="11.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HalconesModel.USUARIO" Width="1.5" PointX="3" PointY="4" IsExpanded="true" />
+        <EntityTypeShape EntityType="HalconesModel.VUELO" Width="1.5" PointX="10.5" PointY="3.625" IsExpanded="true" />
+        <AssociationConnector Association="HalconesModel.CA_AERONAVE_FK" ManuallyRouted="false" />
+        <AssociationConnector Association="HalconesModel.MANTENIMIENTO_AERONAVE_FK" ManuallyRouted="false" />
+        <AssociationConnector Association="HalconesModel.TABLE_8_TIPO_AERONAVE_FK" ManuallyRouted="false" />
+        <AssociationConnector Association="HalconesModel.VUELO_AERONAVE_FK" ManuallyRouted="false" />
+        <AssociationConnector Association="HalconesModel.CA_COMPONENTE_FK" ManuallyRouted="false" />
+        <AssociationConnector Association="HalconesModel.COMP_COMPONENTE_FK" ManuallyRouted="false" />
+        <AssociationConnector Association="HalconesModel.COMP_SUBCOMPONENTE_FK" ManuallyRouted="false" />
+        <AssociationConnector Association="HalconesModel.MC_COMPONENTE_FK" ManuallyRouted="false" />
+        <AssociationConnector Association="HalconesModel.VUELO_CONDICION_VUELO_FK" ManuallyRouted="false" />
+        <AssociationConnector Association="HalconesModel.LICENCIA_PILOTO_LICENCIA_FK" ManuallyRouted="false" />
+        <AssociationConnector Association="HalconesModel.LICENCIA_PILOTO_PILOTO_FK" ManuallyRouted="false" />
+        <AssociationConnector Association="HalconesModel.LLEGADA_VUELO_VUELO_FK" ManuallyRouted="false" />
+        <AssociationConnector Association="HalconesModel.MC_MANTENIMIENTO_AERONAVE_FK" ManuallyRouted="false" />
+        <AssociationConnector Association="HalconesModel.VUELO_MISION_FK" ManuallyRouted="false" />
+        <AssociationConnector Association="HalconesModel.USUARIO_PERFIL_FK" ManuallyRouted="false" />
+        <AssociationConnector Association="HalconesModel.PILOTO_USUARIO_FK" ManuallyRouted="false" />
+        <AssociationConnector Association="HalconesModel.VUELO_PILOTO_FK" ManuallyRouted="false" />
+        <AssociationConnector Association="HalconesModel.VUELO_PILOTO_FKV2" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

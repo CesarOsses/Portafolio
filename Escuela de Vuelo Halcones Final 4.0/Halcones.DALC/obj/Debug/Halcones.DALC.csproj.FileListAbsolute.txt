@@ -1,0 +1,16 @@
+C:\Temp\Escuela de Vuelo Halcones Final\Halcones.DALC\bin\Debug\Halcones.DALC.dll.config
+C:\Temp\Escuela de Vuelo Halcones Final\Halcones.DALC\bin\Debug\Halcones.DALC.dll
+C:\Temp\Escuela de Vuelo Halcones Final\Halcones.DALC\bin\Debug\Halcones.DALC.pdb
+C:\Temp\Escuela de Vuelo Halcones Final\Halcones.DALC\bin\Debug\EntityFramework.dll
+C:\Temp\Escuela de Vuelo Halcones Final\Halcones.DALC\bin\Debug\EntityFramework.xml
+C:\Temp\Escuela de Vuelo Halcones Final\Halcones.DALC\obj\Debug\Halcones.DALC.dll
+C:\Temp\Escuela de Vuelo Halcones Final\Halcones.DALC\obj\Debug\Halcones.DALC.pdb
+C:\Temp\Escuela de Vuelo Halcones Final\Halcones.DALC\obj\Debug\Halcones.DALC.csprojResolveAssemblyReference.cache
+C:\Users\cesarjoseph\Desktop\Soluciones ESCUELA HALCONES FINAL\Escuela de Vuelo Halcones Final 4.0\Halcones.DALC\bin\Debug\Halcones.DALC.dll.config
+C:\Users\cesarjoseph\Desktop\Soluciones ESCUELA HALCONES FINAL\Escuela de Vuelo Halcones Final 4.0\Halcones.DALC\bin\Debug\Halcones.DALC.dll
+C:\Users\cesarjoseph\Desktop\Soluciones ESCUELA HALCONES FINAL\Escuela de Vuelo Halcones Final 4.0\Halcones.DALC\bin\Debug\Halcones.DALC.pdb
+C:\Users\cesarjoseph\Desktop\Soluciones ESCUELA HALCONES FINAL\Escuela de Vuelo Halcones Final 4.0\Halcones.DALC\bin\Debug\EntityFramework.dll
+C:\Users\cesarjoseph\Desktop\Soluciones ESCUELA HALCONES FINAL\Escuela de Vuelo Halcones Final 4.0\Halcones.DALC\bin\Debug\EntityFramework.xml
+C:\Users\cesarjoseph\Desktop\Soluciones ESCUELA HALCONES FINAL\Escuela de Vuelo Halcones Final 4.0\Halcones.DALC\obj\Debug\Halcones.DALC.csprojResolveAssemblyReference.cache
+C:\Users\cesarjoseph\Desktop\Soluciones ESCUELA HALCONES FINAL\Escuela de Vuelo Halcones Final 4.0\Halcones.DALC\obj\Debug\Halcones.DALC.dll
+C:\Users\cesarjoseph\Desktop\Soluciones ESCUELA HALCONES FINAL\Escuela de Vuelo Halcones Final 4.0\Halcones.DALC\obj\Debug\Halcones.DALC.pdb

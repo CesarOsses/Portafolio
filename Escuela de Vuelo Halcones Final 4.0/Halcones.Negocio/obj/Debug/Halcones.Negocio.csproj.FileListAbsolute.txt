@@ -1,0 +1,9 @@
+C:\Temp\Escuela de Vuelo Halcones Final\Halcones.Negocio\bin\Debug\Halcones.Negocio.dll
+C:\Temp\Escuela de Vuelo Halcones Final\Halcones.Negocio\bin\Debug\Halcones.Negocio.pdb
+C:\Temp\Escuela de Vuelo Halcones Final\Halcones.Negocio\bin\Debug\EntityFramework.dll
+C:\Temp\Escuela de Vuelo Halcones Final\Halcones.Negocio\bin\Debug\Halcones.DALC.dll
+C:\Temp\Escuela de Vuelo Halcones Final\Halcones.Negocio\bin\Debug\Halcones.DALC.pdb
+C:\Temp\Escuela de Vuelo Halcones Final\Halcones.Negocio\bin\Debug\EntityFramework.xml
+C:\Temp\Escuela de Vuelo Halcones Final\Halcones.Negocio\obj\Debug\Halcones.Negocio.csprojResolveAssemblyReference.cache
+C:\Temp\Escuela de Vuelo Halcones Final\Halcones.Negocio\obj\Debug\Halcones.Negocio.dll
+C:\Temp\Escuela de Vuelo Halcones Final\Halcones.Negocio\obj\Debug\Halcones.Negocio.pdb

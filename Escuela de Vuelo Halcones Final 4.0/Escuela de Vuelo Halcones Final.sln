@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Halcones.Negocio", "Halcones.Negocio\Halcones.Negocio.csproj", "{71A572EB-CAA1-4D93-A7A8-E3DC03DA72CC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Halcones.WPF", "Halcones.WPF\Halcones.WPF.csproj", "{8198F249-510A-4E1E-B105-ABB66DABD15D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Halcones.DALC", "Halcones.DALC\Halcones.DALC.csproj", "{D9012666-4772-4CBE-AAC8-E62E9F0AAF27}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{71A572EB-CAA1-4D93-A7A8-E3DC03DA72CC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{71A572EB-CAA1-4D93-A7A8-E3DC03DA72CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{71A572EB-CAA1-4D93-A7A8-E3DC03DA72CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{71A572EB-CAA1-4D93-A7A8-E3DC03DA72CC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8198F249-510A-4E1E-B105-ABB66DABD15D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8198F249-510A-4E1E-B105-ABB66DABD15D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8198F249-510A-4E1E-B105-ABB66DABD15D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8198F249-510A-4E1E-B105-ABB66DABD15D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D9012666-4772-4CBE-AAC8-E62E9F0AAF27}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D9012666-4772-4CBE-AAC8-E62E9F0AAF27}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D9012666-4772-4CBE-AAC8-E62E9F0AAF27}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D9012666-4772-4CBE-AAC8-E62E9F0AAF27}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

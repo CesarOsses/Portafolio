@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{71A572EB-CAA1-4D93-A7A8-E3DC03DA72CC}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Halcones.Negocio</RootNamespace>
+    <AssemblyName>Halcones.Negocio</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\..\Escuela de Vuelo Escuadrilla Halcones Mio\packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Aeronave.cs" />
+    <Compile Include="ColeccionAeronaves.cs" />
+    <Compile Include="ColeccionComponente.cs" />
+    <Compile Include="ColeccionComponenteAeronave.cs" />
+    <Compile Include="ColeccionComponentesComponente.cs" />
+    <Compile Include="ColeccionCondicionVuelo.cs" />
+    <Compile Include="ColeccionLicencia.cs" />
+    <Compile Include="ColeccionLicenciaPiloto.cs" />
+    <Compile Include="ColeccionMantenimientoAeronave.cs" />
+    <Compile Include="ColeccionMision.cs" />
+    <Compile Include="ColeccionTipoAeronave.cs" />
+    <Compile Include="ColeccionUsuario.cs" />
+    <Compile Include="ColeccionVuelo.cs" />
+    <Compile Include="CommonBC.cs" />
+    <Compile Include="Componente.cs" />
+    <Compile Include="ComponentesAeronave.cs" />
+    <Compile Include="ComponentesComponente.cs.cs" />
+    <Compile Include="CondicionVuelo.cs" />
+    <Compile Include="ConfigHalcones.cs" />
+    <Compile Include="LLegadaVuelo.cs" />
+    <Compile Include="MantenimientoComponente.cs" />
+    <Compile Include="TipoLicencia.cs" />
+    <Compile Include="LicenciaPiloto.cs" />
+    <Compile Include="MantenimientoAeronave.cs" />
+    <Compile Include="Mision.cs" />
+    <Compile Include="Piloto.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TipoAeronave.cs" />
+    <Compile Include="Usuario.cs" />
+    <Compile Include="Vuelo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Halcones.DALC\Halcones.DALC.csproj">
+      <Project>{d9012666-4772-4cbe-aac8-e62e9f0aaf27}</Project>
+      <Name>Halcones.DALC</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
